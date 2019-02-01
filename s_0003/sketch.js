@@ -10,29 +10,6 @@ var HEIGHT = window.innerHeight;
 var FRAME_RATE = 60;
 var DURATION = getRandomInt(15, 30);
 
-function range(start, stop, step) {
-  if (typeof stop == 'undefined') {
-      // one param defined
-      stop = start;
-      start = 0;
-  }
-
-  if (typeof step == 'undefined') {
-      step = 1;
-  }
-
-  if ((step > 0 && start >= stop) || (step < 0 && start <= stop)) {
-      return [];
-  }
-
-  var result = [];
-  for (var i = start; step > 0 ? i < stop : i > stop; i += step) {
-      result.push(i);
-  }
-
-  return result;
-};
-
 function setup() {
   BG_COLOR = color(27, 27, 27, 200)
   COLOR_1 = color(COLOR_PALETTE[0])
